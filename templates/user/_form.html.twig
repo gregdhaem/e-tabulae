@@ -1,6 +1,10 @@
 <div class="container">
 	{{ form_start(form) }}
-	{{ form_widget(form) }}
+	{# {{ form_widget(form) }} #}
+	{{ form_row(form.email) }}
+	{{ form_row(form.password) }}
+	{{ form_row(form.userRoles) }}
 	<button class="btn-sm btn-primary mt-1">{{ button_label|default('Enregistrer') }}</button>
 	{{ form_end(form) }}
 </div>
+ 
