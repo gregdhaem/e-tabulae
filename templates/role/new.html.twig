@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouvequ Rôle{% endblock %}
+
+{% block body %}
+    <h1>Nouveau Rôle</h1>
+
+    {{ include('role/_form.html.twig') }}
+
+    <a class="btn-sm  btn-secondary mb-1" href="{{ path('role_index') }}">Retour Liste</a>
+{% endblock %}

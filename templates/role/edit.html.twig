@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Modifier Rôle{% endblock %}
+
+{% block body %}
+    <h1>Modifier Rôle</h1>
+
+    {{ include('role/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
+
+    <a class="btn-sm  btn-secondary mb-1" href="{{ path('role_index') }}">Retour Liste</a>
+
+    {{ include('role/_delete_form.html.twig') }}
+{% endblock %}

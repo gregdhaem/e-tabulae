@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Rôle
+{% endblock %}
+
+{% block body %}
+	<h1>Rôle</h1>
+
+	<table class="table" id="roles">
+		<tbody>
+			<tr>
+				<th>Rôle</th>
+				<td>{{ role.title }}</td>
+			</tr>
+			<tr>
+				<th>Description</th>
+				<td>{{ role.description }}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<a class="btn-sm  btn-secondary mb-1" href="{{ path('role_index') }}">Retour Liste</a>
+
+	<a class="btn-sm  btn-secondary mb-1" href="{{ path('role_edit', {'id': role.id}) }}">Modifier</a>
+
+	{{ include('role/_delete_form.html.twig') }}
+{% endblock %}
